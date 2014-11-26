@@ -1,0 +1,25 @@
+
+.boxes{
+    div{
+        position:relative;
+        
+        img{
+            width:100%;
+            height:auto;
+        }
+    }
+    .box{
+        background:#ddd;
+        h2{
+            color:#555;
+            padding:20px;
+            margin:0;
+        }
+    }
+    .top-100{
+        top:100px;
+    }
+    .top-200{
+        top:200px;
+    }
+}

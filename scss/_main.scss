@@ -8,6 +8,12 @@ and open the template in the editor.
     Author     : Qazar
 */
 
+@mixin text-inner-shadow($deep, $color){
+    text-shadow: $deep, $deep, 3px, $primary-color, 0 0 0 $color, $deep, $deep, 3px, $primary-color, 1px 1px 1px #fff;
+    ::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
+    ::selection { background: #5af; color: #fff; text-shadow: none; }
+}
+
 .top-menu{
     width:100%;
     position:fixed;
@@ -72,8 +78,8 @@ h2{
     text-align:right;
     font-family:'latobold',sans-serif;
     margin:0;
-    color:#43442f;
-    text-shadow:-1px -1px 1px #09386d, 1px 1px 1px #fff;
+    color:rgba(0,0,0,0.5);
+    @include text-inner-shadow(3px,#09386d);
     span{
         color:$secondary-color;
     }
@@ -88,7 +94,7 @@ section{
     &.yellow{
         background:$primary-color;
 
-        padding:100px 20px;
+        padding:200px 20px;
         color:#fff;
 
         .img{

@@ -17,6 +17,7 @@ and open the template in the editor.
     font-size:rem-calc(24);
     box-sizing:border-box;
 
+
     ul,nav{
         display: block;
         margin:0;
@@ -49,7 +50,12 @@ and open the template in the editor.
                 width:40%;
                 background:$white;
                 a{
+
                     padding:rem-calc(20); 
+                }
+
+
+                   padding:rem-calc(20); 
                 }
 
             }
@@ -59,7 +65,8 @@ and open the template in the editor.
             }
         }
     }
-}
+
+
 h2{
     font-size:rem-calc(60);
     text-align:right;
@@ -92,4 +99,5 @@ section{
             }
         }
     }
+
 }

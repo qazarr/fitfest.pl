@@ -9,11 +9,19 @@
         }
     }
     .box{
-        background:#ddd;
-        h2{
-            color:#555;
+        background:$secondary-color;
+        h2{            
+            font-size: rem-calc(42);
             padding:20px;
             margin:0;
+            span.number{                
+                color:$primary-color;
+                @include text-inner-shadow2(0, $oil, $primary-color );
+                
+            }
+            span.text{
+                @include text-inner-shadow(3px, $oil,0.3);
+            }
         }
     }
     .top-100{

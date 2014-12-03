@@ -3,77 +3,151 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Foundation</title>
+        <title>fitfest</title>
         <link rel="stylesheet" href="fonts/fonts.css" />
+        <link rel="stylesheet" href="fonts/fitfest/style.css" />
         <link rel="stylesheet" href="css/app.css" />
         <script src="bower_components/modernizr/modernizr.js"></script>
     </head>
     <body>
         <div class="top-menu">
             <nav>
-                <ul>
-                    <li class="logo"><a href=""><img src="img/fitfest_logo.svg" /></a></li>
-                    <li><a href="">Zwiedzający</a></li>
-                    <li><a href="">Wystawca</a></li>
-                    <li><a href="">Press room</a></li>
-                    <li class="menu"><a href="" id="menu-btn"><img src="img/ico_menu.svg" /></a></li>
-                </ul>
+                <div class="medium-7 logo columns"><a href=""><img id='menu-logo' src="img/fitfest_logo.svg" /></a></div>
+                <div class="medium-8 columns">
+                    <div class='small-4 medium-4 columns'><a href="">Zwiedzający</a></div>
+                    <div class='small-4 medium-4 columns'><a href="">Wystawca</a></div>
+                    <div class='small-4 medium-4 columns'><a href="">Press room</a></div>
+                    <div class="small-3 medium-3 columns menu"><a href="" class="menu-btn"><span class="icon-ico_menu"></span></a></div>
+                </div>
             </nav>
         </div>
-        <section>
+        <section id="home" style="margin-top:74px;">
             <div class="boxes">
                 <div class="medium-7 columns">
-                    <div class="medium-15 columns" style="height:300px"></div>
+                    <div class="box hide-for-small-only" id='logo'>
+                        <img src='img/fitfest_logo.svg' />
+                    </div>
                     <div class="box">
-                        <img src="img/sample.jpg" />
-                        <h2><span class='number'>01</span> <span class='text'>Lorem ipsum</span></h2>
+                        <a href="#info">
+                            <img src="img/photo/grey/brzuch.jpg" />
+                            <h2><span class='number'>01</span> <span class='text'>Info</span></h2>
+                        </a>
                     </div>
                 </div>
                 <div class="medium-8 columns">
                     <div class="medium-9 columns">
                         <div class="box">
-                            <img src="img/sample.jpg" />
-                            <h2><span>02</span> Lorem ipsum</h2>
+                            <a href="#wystawcy">
+                               <img src="img/photo/grey/facet.jpg" />
+                                <h2><span class='number'>02</span> <span class='text'>Wystawcy</span></h2>
+                            </a>
                         </div>
                     </div>                
                     <div class="medium-6 columns">
                         <div class="box">
-                            <img src="img/sample.jpg" />                        
+                            <img src="img/photo/grey/para.jpg" />                        
                         </div>
                     </div>
-                    <div class="medium-8 medium-push-7 columns">
+                    <div class="medium-8 medium-push-7 columns">                        
                         <div class="box">
-                            <h2><span>03</span> Lorem ipsum</h2>                    
+                            <h2><span class='number'>03</span> <span class='text'>Kontakt</span></h2>                    
+                        </div>
+                        <div id="kontakt">
+                            <ul>
+                                <li><a href="mailto:info@fitfest.pl" >e-mail: info@fitfest.pl</a></li>
+                                <li><a href="phone:+48 666 777 888" >tel: +48 666 777 888</a></li>
+                            </ul>
+                            <ul class="buttons">
+                                <li><a href=""><span class="icon-paperplane circle"></span>napisz</a></li>
+                                <li><a href=""><span class="icon-fb circle"></span>sprawdź na fb</a></li>                                
+                                <li><a href=""><span class="icon-chat circle"></span>zadzwoń</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="medium-7 medium-pull-8 columns">
+                    <div class="medium-7 medium-pull-8 columns">						
                         <div class="box">
-                            <img src="img/sample.jpg" />
-                            <h2><span>04</span> Lorem ipsum</h2>
-                        </div>
+                            <a href="#dojazd">
+                                <img src="img/photo/grey/joging.jpg" />
+                                <h2><span class='number'>04</span> <span class='text'>Dojazd</span></h2>
+                            </a>
+                        </div>                        
                     </div>                
                 </div>
             </div>
         </section>
-        <section class="yellow">
-        <div class="row">
-          <div class="large-10 columns">
-              <h2><span class='number'>01</span> <span class='text'>Info</span></h2>
-            <p>
-                FitFest to dwudniowy festiwal zdrowego trybu życia, na który zapraszamy wszystkich miłośników aktywnego spędzania czasu. 
-                W weekend 20-21 czerwca Nowa Hala Expo w Łodzi wypełni się sportowym sprzętem, akcesoriami, a co najważniejsze ludźmi pełnymi pasji, którzy profesjonalnie zajmują się m.in. fitnessem, kulturystyką, rozmaitymi sztukami walki czy tańcem. Będzie to doskonała okazja by poznać rynkowe nowości, zasięgnąć specjalistycznych porad oraz zaplanować własny treningowy program na całe lato.
-            </p>
-            <p>
-                Oprócz spotkań z instruktorami, trenerami osobistymi, sportowcami czy dietetykami, będziecie mogli wziąć udział w pokazach, treningach, warsztatach, konkursach oraz panelach dyskusyjnych. Nie zapomnieliśmy także o odpowiedniej, zdrowej diecie. Na terenie FitFest znajdziecie strefę związaną z odżywkami i suplementami diety, jak i stanowiska producentów zdrowej, ekologicznej żywności.
-                FitFest to wydarzenie dla całej rodziny! Każdy z pewnością znajdzie coś dla siebie. Naszych najmłodszych gości zaprosimy do specjalnej Strefy Dziecka, gdzie pojawi się sporo fajnych atrakcji. Będzie to idealny sposób sprawdzenia ofert łódzkich szkół i klubów, które przygotowują zajęcia z cyklu „lato w mieście”.
-            </p>
-          </div>
-          <div class="large-5 columns img">
-              <img src="img/sample.jpg" /> 
-          </div>
-        </div>
-      </section>
-        <section>
+        <section id="info" class="yellow">
+            <div class="row">
+                <div class="large-10 columns">
+                    <h2><span class='number'>01</span> <span class='text'>Info</span></h2>
+                    <p>
+                        FitFest to dwudniowy festiwal zdrowego trybu życia, na który zapraszamy wszystkich miłośników aktywnego spędzania czasu. 
+                        W weekend 20-21 czerwca Nowa Hala Expo w Łodzi wypełni się sportowym sprzętem, akcesoriami, a co najważniejsze ludźmi pełnymi pasji, którzy profesjonalnie zajmują się m.in. fitnessem, kulturystyką, rozmaitymi sztukami walki czy tańcem. Będzie to doskonała okazja by poznać rynkowe nowości, zasięgnąć specjalistycznych porad oraz zaplanować własny treningowy program na całe lato.
+                    </p>
+                    <p>
+                        Oprócz spotkań z instruktorami, trenerami osobistymi, sportowcami czy dietetykami, będziecie mogli wziąć udział w pokazach, treningach, warsztatach, konkursach oraz panelach dyskusyjnych. Nie zapomnieliśmy także o odpowiedniej, zdrowej diecie. Na terenie FitFest znajdziecie strefę związaną z odżywkami i suplementami diety, jak i stanowiska producentów zdrowej, ekologicznej żywności.
+                        FitFest to wydarzenie dla całej rodziny! Każdy z pewnością znajdzie coś dla siebie. Naszych najmłodszych gości zaprosimy do specjalnej Strefy Dziecka, gdzie pojawi się sporo fajnych atrakcji. Będzie to idealny sposób sprawdzenia ofert łódzkich szkół i klubów, które przygotowują zajęcia z cyklu „lato w mieście”.
+                    </p>
+                </div>
+                <div class="large-5 columns img">
+                    <img src="img/photo/grey/fitness.jpg" /> 
+                </div>
+            </div>
+        </section>
+        <section id="wystawcy">
+            <div class="boxes">
+                <div class="medium-5 columns bg-dark" >
+                    <div class="box">
+                        <h2 class="text-center"><span class="number">02</span> <span class="text">Wystawcy</span></h2>
+                        <h3>Działy tematyczne</h3>
+                    </div>
+                    <div class="medium-12 columns">
+                        <div class="box">
+                            <img src="img/photo/grey/rechabilitacja.jpg" />
+                            <h2><span class="number">02</span> <span class="text">Zdrowie</span></h2>
+                        </div>
+                    </div>                    
+                    <div class="medium-15 columns">
+                        <div class="box">
+                            <img src="img/photo/grey/moda.jpg" />
+                            <h2><span class="number">03</span> <span class="text">Moda</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-6 columns bg-yellow">
+                    <div class="medium-15 columns">
+                        <div class="box">
+                            <img src="img/photo/grey/skcesoria.jpg" />
+                            <h2><span class="number">03</span> <span class="text">Sprzęt i akcesoria</span></h2>
+                        </div>
+                    </div>
+                    <div class="medium-12 columns">
+                        <div class="box">
+                            <img src="img/photo/grey/grupa.jpg" />
+                            <h2><span class="number">04</span> <span class="text">Sport i rekreacja</span></h2>
+                        </div>
+                    </div>
+                    <div class="medium-10 columns">
+                        <div class="box">
+                            <img src="img/photo/grey/suplementy.jpg" />
+                            <h2><span class="number">05</span> <span class="text">Suplementy</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-4 columns">
+                    <div class="box">
+                        <img src="img/photo/grey/jedzenie.jpg" />
+                        <h2><span class="number">06</span> <span class="text">Dieta</span></h2>
+                    </div>
+                    <div class="box">
+                        <img src="img/photo/grey/trener.jpg" />
+                        <h2><span class="number">07</span> <span class="text">Usługi</span></h2>
+                    </div>
+                    <div class="box">
+                        <img src="img/photo/grey/pielegnacja.jpg" />
+                        <h2><span class="number">08</span> <span class="text">Pielęgnacja</span></h2>
+                    </div>
+                </div>                
+            </div>
             <div class="brands">
                 <div class='sport'><img src="img/brands/logo_fitness_pl.jpg"/></div>
                 <div class='uslugi'><img src="img/brands/MENS_HEALTH_logo.jpg"/></div>
@@ -91,7 +165,7 @@
                 <div class='sport'><img src="img/brands/logo_fitness_pl.jpg"/></div>
                 <div class='sport'><img src="img/brands/logo_fitness_pl.jpg"/></div>
             </div>
-            <div class='brands-bar'>
+            <div class='brands-bar hide'>
                 <nav>
                     <ul>
                         <li><a class='filter-sport'>Sport i rekreacja</a></li>
@@ -100,7 +174,25 @@
                     </ul>
                 </nav>                 
             </div>    
-        </section>  
+        </section> 
+        <section id="dojazd" class="yellow end-sec">
+            <h2 class="text-center" style="margin-bottom:20px;"><span class="number">03</span> <span class="text">Dojazd</span></h2>
+            <div id="map-canvas" data-lat="51.750220" data-lng="19.450990"></div>
+            <div class="row">
+                <div class="small-7 medium-5 large-3 columns small-centered text-center">
+                    <button id="footer-info-btn"><span class="icon-compass"></span></button>
+                </div>
+                <div id="footer-info" class="large-15 columns text-center" >
+                    <h3>JAK DOJECHAĆ?</h3>
+                    <p>Nowa Hala Expo położona jest w samym centrum Łodzi, przy al. Politechniki 4.</p>
+                    <ul>
+                        <li>dojazd tramwajem (przystanek Radwańska): 15, 15a.</li>
+                        <li>dojazd autobusem (przystanek Politechniki-Radwańska): 50, 55, 77.</li>
+                    </ul>
+                    <p>Rozkład jazdy znajdziecie na stronie www.mpk.lodz.pl/rozklady/linie.jsp</p>
+                </div>
+            </div>
+        </section>
 
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -108,5 +200,87 @@
 
         <script src="js/slick.min.js"></script>
         <script src="js/app.js"></script>
+
+
+        <script type="text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEOHXRjGgLdOc7JDOVm1bjzTTjrOlUAoE">
+        </script>
+        <script>
+
+            var map;
+            var lat = parseFloat(document.getElementById('map-canvas').getAttribute('data-lat'));
+            var lng = parseFloat(document.getElementById('map-canvas').getAttribute('data-lng'));
+            var center = new google.maps.LatLng(lat, lng);
+            var wjazd = new google.maps.LatLng(51.753662, 19.457616);
+            var wejscie = new google.maps.LatLng(51.753804, 19.459647);
+            var MY_MAPTYPE_ID = 'custom_style';
+            function initialize() {
+                var mapOptions = {
+                    zoom: 17,
+                    center: center,
+                    mapTypeControlOptions: {
+                        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+                    }
+                };
+                var mapOpts = [
+                    {
+                        "stylers": [
+                            {"hue": "#ffbe14"},
+                            {"saturation": -26},
+                            {"lightness": 19},
+                            {"gamma": 1.09}
+                        ]
+                    }, {
+                    }
+                ];
+
+                map = new google.maps.Map(document.getElementById('map-canvas'),
+                        mapOptions);
+
+                var marker = new google.maps.Marker({
+                    position: center,
+                    map: map,
+                    title: "AK Foto studio"
+                });
+                if (document.getElementById('map-canvas').getAttribute('data-arrows') == '1') {
+                    var arrow_left_ico = {
+                        path: "M 22,13.454 8.796,13.454 14.134,18.791 7.667,18.791 0.041,11.166 7.667,3.541 14.134,3.541 8.796,8.879 22,8.879 z",
+                        fillColor: '#d490b5',
+                        fillOpacity: 1.0,
+                        scale: 1,
+                        strokeWeight: 0
+                    };
+
+                    var arrow_left = new google.maps.Marker({
+                        position: wejscie,
+                        icon: arrow_left_ico,
+                        map: map,
+                        title: "wejście od strony Piotrkowskiej"
+                    });
+                    var arrow_right_ico = {
+                        path: "M 0.041,8.879 13.245,8.879 7.908,3.541 14.375,3.541 22,11.167 14.375,18.791 7.908,18.791 13.245,13.453 0.041,13.453 		 z",
+                        fillColor: '#d490b5',
+                        fillOpacity: 1.0,
+                        scale: 1,
+                        strokeWeight: 0,
+                    };
+
+                    var arrow_right = new google.maps.Marker({
+                        position: wjazd,
+                        icon: arrow_right_ico,
+                        map: map,
+                        title: "wjazd na parking"
+                    });
+                }
+                var styledMap = new google.maps.StyledMapType(mapOpts,
+                        {name: "Styled Map"});
+
+                //Associate the styled map with the MapTypeId and set it to display.
+                map.mapTypes.set('map_style', styledMap);
+                map.setMapTypeId('map_style');
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
     </body>
 </html>

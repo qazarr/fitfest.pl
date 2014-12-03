@@ -3,6 +3,7 @@ $(document).foundation();
     var App = {
         init: function () {
             this.slickStart();
+            this.footer();
         },
         slickStart: function () {
             $('.brands').slick({
@@ -39,6 +40,15 @@ $(document).foundation();
                 }
             });
 
+        },
+        footer:function(){
+            $('#footer-info-btn').click(function(event) {
+                $('html, body').animate({
+                    scrollTop: $(document).height()
+                });
+                $('#footer-info').toggle(300, 'swing');
+                event.preventDefault();
+            });
         }
     }
     App.init();

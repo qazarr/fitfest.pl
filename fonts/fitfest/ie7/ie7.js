@@ -13,6 +13,7 @@
 		el.innerHTML = '<span style="font-family: \'fitfest\'">' + entity + '</span>' + html;
 	}
 	var icons = {
+		'icon-dot': '&#xe60a;',
 		'icon-chat': '&#xe602;',
 		'icon-clipboard2': '&#xe603;',
 		'icon-compass': '&#xe604;',

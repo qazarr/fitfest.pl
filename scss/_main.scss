@@ -19,14 +19,15 @@ and open the template in the editor.
     ::selection { background: #5af; color: #fff; text-shadow: none; }
 }
 @mixin text-inner-shadow2($deep, $color, $color2){
-    background-color:$color;
-    color: transparent;
-    text-shadow: 0px 0px 2px $color2, 1px 1px 0px #fff;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    ::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
-    ::selection { background: #5af; color: #fff; text-shadow: none; }
+    /*    background-color:$color;
+        color: transparent;
+        text-shadow: 0px 0px 2px $color2, 1px 1px 0px #fff;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        ::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
+        ::selection { background: #5af; color: #fff; text-shadow: none; }*/
+    color:$color2;
 
 }
 @mixin text-outer-shadow($deep, $color){
@@ -89,14 +90,14 @@ and open the template in the editor.
         a{
 
             text-transform: uppercase;
-            font-size:rem-calc(28);
+            font-size:28px;
             color:$oil;
         }    
         ul{
             li{
                 a{
                     text-transform: none;
-                    font-size:rem-calc(24);
+                    font-size:24px;
                     &:hover{
                         color:$primary-color;
                     }
@@ -111,7 +112,7 @@ and open the template in the editor.
         margin:0;
         padding:0;
         width:100%;
-        font-size:rem-calc(20);
+        font-size:20px;
         div{
             display: block;
             margin:0;
@@ -120,7 +121,7 @@ and open the template in the editor.
             border-bottom:1px solid $white;
             a{
                 display: inline-block;
-                padding:rem-calc(20) rem-calc(10);
+                padding:20px 10px;
                 text-align:center;
                 color:$oil;                
                 text-transform: lowercase;
@@ -136,7 +137,7 @@ and open the template in the editor.
                 background:$white;
                 a{
 
-                    padding:rem-calc(12); 
+                    padding:12px; 
                     &:hover{
                         background: white;
                     }
@@ -170,15 +171,19 @@ h2{
 
 section{
     width:100%;
-    display:block;
+    display:inline-block;
     box-sizing: border-box;
     text-align:justify;
-
+    margin-bottom:-5px;
     &.yellow{
         background:$primary-color;
         padding:200px 0;
         color:#fff;
         margin:0;
+        margin-bottom:-5px;
+        p{
+            font-size:16px;
+        }
         div.columns{
             padding-left:20px;
             padding-right:20px;
@@ -222,7 +227,7 @@ section{
                 a{
                     color:$oil;
                     font-weight:bolder;
-                    font-size:rem-calc(18);
+                    font-size:18px;
                 }
             }
         }
@@ -254,9 +259,16 @@ button span{
 }
 #footer-info{
     display: none;
+    ul{
+        text-align:center;
+    }
+    p{
+        margin-bottom:0;
+    }
     a{
         color:$white;
     }
+    padding-bottom:30px;
 
 }
 h3{
@@ -269,6 +281,20 @@ h3{
     font-family:'latobold';
     background: $primary-color;
     color:#fff;
+    &.address{
+        background:$secondary-color;
+        color:$oil;
+
+        span.number{                
+            color:$primary-color;
+            @include text-inner-shadow2(0, $oil, $primary-color );
+
+        }
+        span.text{
+            @include text-inner-shadow(3px, $black,0.3);
+        }
+    }
+
 }
 .bg-dark{
     background:$oil;
@@ -281,17 +307,17 @@ ul{
     list-style:none;
     padding:0;
     margin:0;
-    font-size: rem-calc(22);
+    font-size:22px;
     text-align:left;
     li{
-        padding-left:rem-calc(24);
+        padding-left:24px;
         text-indent:-24px;
         &:before{
             content: "\e60a";
             font-family:'fitfest';
             color:$primary-color;
-            font-size:rem-calc(24);
-            line-height:rem-calc(24);
+            font-size:24;
+            line-height:24px;
         }
         a{
             text-transform: none;            
@@ -301,10 +327,41 @@ ul{
         }
     }
 }
+#clock{
+    font-size:rem-calc(48);
+    color:$white;
+    display:inline-block;
+    padding:20px;
+    width:100%;
+    display: inline-block;
+    text-align:center;
+    div{
+        display:inline-block;
+        color:$primary-color;
+        text-transform:uppercase;
+        font-size:rem-calc(32);
+        font-family:'latobold';
+        vertical-align:middle;
+        span{
+            display:block;
+            font-size:rem-calc(48);
+            margin:30px 0 10px 0;
+            background:$white;
+            border:2px solid $primary-color;
+            padding:20px 3px 5px 3px;
+            font-family:"latoregular";
+            color:$oil;
+            -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,1);
+            -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,1);
+            box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,1);
+        }
+    }
+
+}
 
 @media #{$medium-only}{
-    div.boxes .box h2{
-        font-size:rem-calc(24);
+    html{
+        font-size:8px;
     }
 }
 

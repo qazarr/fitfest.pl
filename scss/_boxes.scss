@@ -97,12 +97,12 @@
                     content:none;
                 }
                 a{
-                color:$oil;
-                font-size:rem-calc(24);
+                    color:$oil;
+                    font-size:24px;
+                }
+
             }
-                
-            }
-            
+
         }
         .buttons{            
             padding:0;
@@ -113,10 +113,41 @@
                 a{
                     color:$oil;
                     font-size:rem-calc(16);
-
+                    &:hover{
+                        color:$primary-color;
+                    }
                 }
             }
         } 
     }
 
+}
+
+@media #{$medium-only}{
+    #info{
+        #clock{
+            div{
+                span{
+                    font-size:20px;
+                }
+            }
+        }
+        h1{
+            font-size:24px;
+        }
+    }
+}
+@media #{$small-only}{
+    #info{
+        #clock{
+            div{
+                span{
+                    font-size:24px;
+                }
+            }
+        }
+        h1{
+            font-size:26px;
+        }
+    }
 }

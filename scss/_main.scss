@@ -9,14 +9,16 @@ and open the template in the editor.
 */
 
 @mixin text-inner-shadow($deep, $color, $power){
-    background-color:$color;
+    color:$color;
+    text-shadow: 1px 1px 1px rgba(255,255,255,$power);
+/*    background-color:$color;
     color: transparent;
     text-shadow: 1px 1px $deep rgba(255,255,255,$power);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
     ::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
-    ::selection { background: #5af; color: #fff; text-shadow: none; }
+    ::selection { background: #5af; color: #fff; text-shadow: none; }*/
 }
 @mixin text-inner-shadow2($deep, $color, $color2){
     /*    background-color:$color;
@@ -81,8 +83,7 @@ and open the template in the editor.
         background:$secondary-color;
         padding:30px;
         box-sizing: border-box;
-        border:1px solid $white;
-        margin-top:1px;
+        border:1px solid $white;        
         .inner-menu{
             display:inline-block;
 
@@ -165,7 +166,7 @@ h2{
         @include text-inner-shadow(3px,$black,0.3);
     }    
     span.number{        
-        @include text-inner-shadow(1px,$black,0.95);
+        @include text-inner-shadow(1px,$secondary-color,0);
     }
 }
 
@@ -246,6 +247,14 @@ span.circle{
     margin:15px auto;
     box-sizing:border-box;
     font-size:24px;
+    
+    &:hover{
+        border-color:$primary-color;
+        a{
+            color:$primary-color;
+        }
+        
+    }
 }
 
 #map-canvas{
@@ -362,6 +371,22 @@ ul{
 @media #{$medium-only}{
     html{
         font-size:8px;
+    }
+    
+}
+@media #{$small-only}{
+    .top-menu nav div a{
+        font-size:16px;
+    }
+    
+}
+@media screen and (max-width:400px){
+    .top-menu nav div{
+        
+    }
+    .top-menu nav div a{
+        font-size:12px;
+        padding:14px 2px;
     }
 }
 

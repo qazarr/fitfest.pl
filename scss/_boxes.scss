@@ -17,7 +17,7 @@
                 margin:0;
                 box-sizing:border-box;
                 display:inline-block;
-                color:#fff;
+                color:#fff;                
                 img{
                     display: inline-block;
                     width:auto;
@@ -58,11 +58,15 @@
             margin:0;    
             background: $secondary-color;
             border:1px solid $white;
+            overflow-x:auto;
+            h2{
+                font-size: 34px;
+            }
             ul{
                 padding:20px;
                 li{
                     font-family:'latoregular';
-                    font-size:rem-calc(24);
+                    font-size:20px;
                 }
             }
         }
@@ -112,7 +116,7 @@
                 margin:0 20px;
                 a{
                     color:$oil;
-                    font-size:rem-calc(16);
+                    font-size:16px;
                     &:hover{
                         color:$primary-color;
                     }

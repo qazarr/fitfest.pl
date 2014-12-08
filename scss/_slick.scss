@@ -2,19 +2,19 @@
 
 // Default Variables
 
-$slick-font-path: "./fonts/" !default;
-$slick-font-family: "latoregular" !default;
+$slick-font-path: "./fonts/fitfest/style.css" !default;
+$slick-font-family: "fitfest" !default;
 $slick-loader-path: "../img/" !default;
 $slick-arrow-color: white !default;
-$slick-dot-color: black !default;
-$slick-dot-color-active: $slick-dot-color !default;
-$slick-prev-character: '<' !default;
-$slick-next-character: '>' !default;
-$slick-dot-character: '\2022' !default;
-$slick-dot-size: 6px !default;
-$slick-opacity-default: .75 !default;
+$slick-dot-color: white !default;
+$slick-dot-color-active: $oil!default;
+$slick-prev-character: '\e608' !default;
+$slick-next-character: '\e609' !default;
+$slick-dot-character: '\e60a' !default;
+$slick-dot-size: 24px !default;
+$slick-opacity-default: 1 !default;
 $slick-opacity-on-hover: 1 !default;
-$slick-opacity-not-active: .25 !default;
+$slick-opacity-not-active: 1 !default;
 
 
 @function slick-image-url($url) {
@@ -155,8 +155,8 @@ $slick-opacity-not-active: .25 !default;
 .slick-next {
     position: absolute;
     display: block;
-    height: 20px;
-    width: 20px;
+    height: 100px;
+    width: 98px;
     line-height: 0;
     font-size: 0;
     cursor: pointer;
@@ -181,7 +181,7 @@ $slick-opacity-not-active: .25 !default;
 }
 .slick-prev:before, .slick-next:before {
     font-family: $slick-font-family;
-    font-size: 20px;
+    font-size: 60px;
     line-height: 1;
     color: $slick-arrow-color;
     opacity: $slick-opacity-default;
@@ -189,7 +189,7 @@ $slick-opacity-not-active: .25 !default;
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-prev {
-    left: -25px;
+    left: -100px;
     [dir="rtl"] & {
         left:  auto;
         right: -25px;
@@ -202,7 +202,7 @@ $slick-opacity-not-active: .25 !default;
     }
 }
 .slick-next {
-    right: -25px;
+    right: -100px;
     [dir="rtl"] & {
         left:  -25px;
         right: auto;

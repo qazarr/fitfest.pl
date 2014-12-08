@@ -11,14 +11,14 @@ and open the template in the editor.
 @mixin text-inner-shadow($deep, $color, $power){
     color:$color;
     text-shadow: 1px 1px 1px rgba(255,255,255,$power);
-/*    background-color:$color;
-    color: transparent;
-    text-shadow: 1px 1px $deep rgba(255,255,255,$power);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    ::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
-    ::selection { background: #5af; color: #fff; text-shadow: none; }*/
+    /*    background-color:$color;
+        color: transparent;
+        text-shadow: 1px 1px $deep rgba(255,255,255,$power);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        ::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
+        ::selection { background: #5af; color: #fff; text-shadow: none; }*/
 }
 @mixin text-inner-shadow2($deep, $color, $color2){
     /*    background-color:$color;
@@ -34,6 +34,9 @@ and open the template in the editor.
 }
 @mixin text-outer-shadow($deep, $color){
     text-shadow: 0px -1px $deep #9f8510, 0px 1px $deep #fff;
+}
+body{
+    display:block; 
 }
 .info{
     background:url('../img/photo/grey/bg_fit.jpg');
@@ -172,7 +175,7 @@ h2{
 
 section{
     width:100%;
-    display:inline-block;
+    display:block;
     box-sizing: border-box;
     text-align:justify;
     margin-bottom:-5px;
@@ -180,8 +183,7 @@ section{
         background:$primary-color;
         padding:200px 0;
         color:#fff;
-        margin:0;
-        margin-bottom:-5px;
+        margin:0;        
         p{
             font-size:16px;
         }
@@ -199,6 +201,17 @@ section{
     }
     &.end-sec{
         padding-bottom:0!important;
+    }
+    &.list{        
+        padding:100px 0;
+        box-sizing: border-box;
+        h2{
+            background: $secondary-color;
+            text-align:left;
+            span.number{
+                color:$primary-color;
+            }
+        }
     }
 
 }
@@ -247,13 +260,13 @@ span.circle{
     margin:15px auto;
     box-sizing:border-box;
     font-size:24px;
-    
+
     &:hover{
         border-color:$primary-color;
         a{
             color:$primary-color;
         }
-        
+
     }
 }
 
@@ -270,12 +283,16 @@ button span{
     display: none;
     ul{
         text-align:center;
+        li{
+            font-size:16px;
+        }
     }
     p{
         margin-bottom:0;
     }
     a{
         color:$white;
+        text-decoration:underline;
     }
     padding-bottom:30px;
 
@@ -311,7 +328,6 @@ h3{
 .bg-yellow{
     background:$primary-color;
 }
-
 ul{
     list-style:none;
     padding:0;
@@ -367,22 +383,36 @@ ul{
     }
 
 }
+.slider{
+    margin:0 100px;
+    div{
+        margin:0 20px;
+    }
+}
 
 @media #{$medium-only}{
     html{
         font-size:8px;
     }
-    
+
 }
 @media #{$small-only}{
     .top-menu nav div a{
         font-size:16px;
     }
-    
+    .slider{
+        margin:0 20px;
+        div{
+            margin:0 20px;
+        }
+        button{
+            display:none;
+        }
+    }
 }
 @media screen and (max-width:400px){
     .top-menu nav div{
-        
+
     }
     .top-menu nav div a{
         font-size:12px;

@@ -1,47 +1,57 @@
-$(document).foundation();
 (function ($) {
+$(document).foundation();
+
     var App = {
         init: function () {
-            //this.slickStart();
+            this.slickStart();
             this.footer();
             this.menu();
             this.clock();
-            this.box_fix();
+            this.smooth_scroll();
         },
         slickStart: function () {
-            $('.brands').slick({
-                slidesToShow: 8,
-                slidesToScroll: 8
-            });
+            if ($('.brands').length > 0) {
+                $('.brands').slick({
+                    slidesToShow: 8,
+                    slidesToScroll: 8
+                });
 
-            var filtered = false;
-            $('.filter-sport').on('click', function () {
-                if (filtered === false) {
-                    $('.brands').slickFilter('.sport');
-                    filtered = true;
-                } else {
-                    $('.sport').slickUnfilter();
-                    filtered = false;
-                }
-            });
-            $('.filter-uslugi').on('click', function () {
-                if (filtered === false) {
-                    $('.brands').slickFilter('.uslugi');
-                    filtered = true;
-                } else {
-                    $('.uslugi').slickUnfilter();
-                    filtered = false;
-                }
-            });
-            $('.filter-suplementy').on('click', function () {
-                if (filtered === false) {
-                    $('.brands').slickFilter('.suplementy');
-                    filtered = true;
-                } else {
-                    $('.suplementy').slickUnfilter();
-                    filtered = false;
-                }
-            });
+                var filtered = false;
+                $('.filter-sport').on('click', function () {
+                    if (filtered === false) {
+                        $('.brands').slickFilter('.sport');
+                        filtered = true;
+                    } else {
+                        $('.sport').slickUnfilter();
+                        filtered = false;
+                    }
+                });
+                $('.filter-uslugi').on('click', function () {
+                    if (filtered === false) {
+                        $('.brands').slickFilter('.uslugi');
+                        filtered = true;
+                    } else {
+                        $('.uslugi').slickUnfilter();
+                        filtered = false;
+                    }
+                });
+                $('.filter-suplementy').on('click', function () {
+                    if (filtered === false) {
+                        $('.brands').slickFilter('.suplementy');
+                        filtered = true;
+                    } else {
+                        $('.suplementy').slickUnfilter();
+                        filtered = false;
+                    }
+                });
+            }
+            if($('.slider').length>0){
+                $('.slider').slick({
+                    dots:true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
+            }
 
         },
         footer: function () {
@@ -60,7 +70,7 @@ $(document).foundation();
             console.log(logoH);
             var h = totalH - menuH;
 
-            $('#home').css('margin-top',menuH+"px");
+            $('#home').css('padding-top', menuH + "px");
             $('.total-menu').height(h);
             $('.total-menu').css('top', menuH + "px");
 
@@ -99,31 +109,58 @@ $(document).foundation();
 
         },
         box_fix: function () {
+            if ($(window).width() > 699) {
+                var menu_pos = $('.nav-btn').offset().top;
+                $('.fix-size').height(menu_pos - $('.fix-size').offset().top + $('.nav-btn').height());
+                var pos_fix = $('.up').offset().top - menu_pos;
+                $('.up').css('bottom', pos_fix);
+                //var h_fix= $('.nav-btn').height()+menu_pos;
 
-            $('.up').css('bottom', $('.nav-btn').height());
+            }
+        },
+        smooth_scroll: function () {
+            $(document).on('click', 'a[href^="#"]', function (e) {
+                // target element id
+                var id = $(this).attr('href');
+
+                // target element
+                var $id = $(id);
+                if ($id.size() === 0) {
+                    return;
+                }
+
+                // prevent standard hash navigation (avoid blinking in IE)
+                e.preventDefault();
+
+                // top position relative to the document
+                var pos = $(id).offset().top - $('.top-menu').height();
+
+                // animated top scrolling
+                $('body, html').animate({scrollTop: pos});
+            });
         }
     }
     $(window).load(function () {
-        App.init();
+        App.box_fix();
     });
 
-//    var lastWindowHeight = $(window).height();
-//    var lastWindowWidth = $(window).width();
-//    $(window).on("resize orientationchange", function () {       
-//            if ($(window).height() != lastWindowHeight || $(window).width() != lastWindowWidth) {
-//
-//                //set this windows size
-//                lastWindowHeight = $(window).height();
-//                lastWindowWidth = $(window).width();
-//                if (window.RT)
-//                    clearTimeout(window.RT);
-//                window.RT = setTimeout(function ()
-//                {
-//                    this.location.reload(false); /* false to get page from cache */
-//                }, 200);
-//                // location.reload();
-//            }
-//    })
-//    App.init();
+    var lastWindowHeight = $(window).height();
+    var lastWindowWidth = $(window).width();
+    $(window).on("resize orientationchange", function () {
+        if ($(window).height() != lastWindowHeight || $(window).width() != lastWindowWidth) {
+
+            //set this windows size
+            lastWindowHeight = $(window).height();
+            lastWindowWidth = $(window).width();
+            if (window.RT)
+                clearTimeout(window.RT);
+            window.RT = setTimeout(function ()
+            {
+                this.location.reload(false); /* false to get page from cache */
+            }, 200);
+            // location.reload();
+        }
+    })
+    App.init();
 
 })(jQuery);

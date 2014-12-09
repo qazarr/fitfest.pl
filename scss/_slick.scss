@@ -18,12 +18,9 @@ $slick-opacity-not-active: 1 !default;
 
 
 @function slick-image-url($url) {
-  @if function-exists(image-url) {
-    @return image-url($url, false, false);
-  }
-  @else  {
+  
     @return url($slick-loader-path + $url);
-  }
+  
 }
 
 @function slick-font-url($url) {

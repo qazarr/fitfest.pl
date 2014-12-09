@@ -132,15 +132,17 @@ body{
                 margin:0;
                 box-sizing:border-box;
                 width:100%;
+                
                 &:hover{
-                    background:$primary-color;
+                    background:$primary-color url('../img/strefa.png') center top no-repeat;
+                    background-size: cover;
                     color:#fff;
                 }
             }
             &.logo{               
                 background:$white;
                 a{
-
+                    background:$white;
                     padding:12px; 
                     &:hover{
                         background: white;
@@ -149,7 +151,10 @@ body{
 
             }
             &.menu{                
-                background:$white;  
+                background:$white; 
+                a:hover{
+                    background:$primary-color;
+                }
                 color:$oil;
             }
 
@@ -381,6 +386,7 @@ ul{
             box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,1);
         }
     }
+    overflow:hidden;
 
 }
 .slider{
@@ -389,12 +395,33 @@ ul{
         margin:0 20px;
     }
 }
-
+@media screen and (max-width:1300px){
+    html{
+        font-size:12px;
+    }
+    .boxes #kontakt .buttons li{
+        margin:0 3px!important;
+    }
+    
+}
 @media #{$medium-only}{
     html{
         font-size:8px;
     }
-
+    #clock{
+        div{
+            span{
+                color:$secondary-color;
+                background: 0;
+                border:0;
+                padding:0;
+                box-shadow: none;
+            }
+        }
+    }
+    section{
+        margin-bottom: 0;
+    }
 }
 @media #{$small-only}{
     .top-menu nav div a{
@@ -409,14 +436,31 @@ ul{
             display:none;
         }
     }
-}
-@media screen and (max-width:400px){
-    .top-menu nav div{
-
+    section.yellow, section.list{
+        padding:50px 0;
     }
+}
+@media screen and (max-width:420px){
+    
     .top-menu nav div a{
         font-size:12px;
         padding:14px 2px;
+    }
+    #clock{
+        div{
+            font-size:rem-calc(18);
+            span{
+                font-size:rem-calc(32);
+            }
+        }
+    }
+    .info h1{
+        padding:20px;
+        font-size:rem-calc(36);
+        line-height: rem-calc(38);
+    }
+    .boxes #logo.box{
+        padding:50px!important;
     }
 }
 

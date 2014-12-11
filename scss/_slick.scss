@@ -5,8 +5,8 @@
 $slick-font-path: "./fonts/fitfest/style.css" !default;
 $slick-font-family: "fitfest" !default;
 $slick-loader-path: "../img/" !default;
-$slick-arrow-color: white !default;
-$slick-dot-color: white !default;
+$slick-arrow-color: $primary-color !default;
+$slick-dot-color: $primary-color !default;
 $slick-dot-color-active: $oil!default;
 $slick-prev-character: '\e608' !default;
 $slick-next-character: '\e609' !default;
@@ -153,14 +153,14 @@ $slick-opacity-not-active: 1 !default;
     position: absolute;
     display: block;
     height: 100px;
-    width: 98px;
+    width: 50px;
     line-height: 0;
     font-size: 0;
     cursor: pointer;
     background: transparent;
     color: transparent;
-    top: 50%;
-    margin-top: -10px;
+    top: 100%;
+    margin-top: -25px;
     padding: 0;
     border: none;
     outline: none;
@@ -186,7 +186,7 @@ $slick-opacity-not-active: 1 !default;
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-prev {
-    left: -100px;
+    left: -50px;
     [dir="rtl"] & {
         left:  auto;
         right: -25px;
@@ -199,7 +199,7 @@ $slick-opacity-not-active: 1 !default;
     }
 }
 .slick-next {
-    right: -100px;
+    right: -50px;
     [dir="rtl"] & {
         left:  -25px;
         right: auto;

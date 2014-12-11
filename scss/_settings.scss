@@ -616,19 +616,19 @@ $header-line-height: 1.1;
 // $include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
-// $form-spacing: rem-calc(16);
+// $form-spacing: 16px;
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
-// $form-label-font-size: rem-calc(14);
+ $form-label-font-size: 16px;
 // $form-label-font-weight: $font-weight-normal;
-// $form-label-line-height: 1.5;
+ $form-label-line-height: 24px;
 // $form-label-font-color: scale-color($black, $lightness: 30%);
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: rem-calc(14);
+// $input-font-size: rem-calc(16);
 // $input-bg-color: $white;
 // $input-focus-bg-color: scale-color($white, $lightness: -2%);
 // $input-border-color: scale-color($white, $lightness: -20%);
@@ -644,7 +644,7 @@ $header-line-height: 1.1;
 // $fieldset-border-style: solid;
 // $fieldset-border-width: 1px;
 // $fieldset-border-color: $gainsboro;
-// $fieldset-padding: rem-calc(20);
+ $fieldset-padding: 10px;
 // $fieldset-margin: rem-calc(18 0);
 
 // We use these to style the legends when you use them
@@ -667,7 +667,7 @@ $header-line-height: 1.1;
 // We use these to style the error states for inputs and labels
 // $input-error-message-padding: rem-calc(6 9 9);
 // $input-error-message-top: -1px;
-// $input-error-message-font-size: rem-calc(12);
+ $input-error-message-font-size: 16px;
 // $input-error-message-font-weight: $font-weight-normal;
 // $input-error-message-font-style: italic;
 // $input-error-message-font-color: $white;
@@ -787,7 +787,7 @@ $header-line-height: 1.1;
 // $label-radius: $global-radius;
 
 // We use these to style the label text
-// $label-font-sizing: rem-calc(11);
+ $label-font-sizing: 14px;
 // $label-font-weight: $font-weight-normal;
 // $label-font-color: $oil;
 // $label-font-color-alt: $white;

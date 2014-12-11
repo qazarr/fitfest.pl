@@ -1,5 +1,5 @@
 (function ($) {
-$(document).foundation();
+    $(document).foundation();
 
     var App = {
         init: function () {
@@ -8,6 +8,7 @@ $(document).foundation();
             this.menu();
             this.clock();
             this.smooth_scroll();
+            this.picture_hover();
         },
         slickStart: function () {
             if ($('.brands').length > 0) {
@@ -45,11 +46,28 @@ $(document).foundation();
                     }
                 });
             }
-            if($('.slider').length>0){
+            if ($('.slider').length > 0) {
                 $('.slider').slick({
-                    dots:true,
+                    dots: true,
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 1000,
+                            settings :{
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                            }
+                        },
+                        {                            
+                            breakpoint: 768,
+                            settings: {
+                                arrows: false,
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                            }
+                            
+                        }],
                 });
             }
 
@@ -138,7 +156,25 @@ $(document).foundation();
                 // animated top scrolling
                 $('body, html').animate({scrollTop: pos});
             });
+        },
+        //---------------------------picture hover
+        picture_hover: function () {
+            $('.pic-fade').on('mouseover', function () {
+                $(this).find('img').first().animate({
+//               $(this).find('img').animate({
+                    opacity: 0.0,
+                },
+                        200, 'swing'
+                        );
+            }).on('mouseleave', function () {
+                $(this).find('img').first().animate({
+                    opacity: 1.0,
+                },
+                        1000, 'linear'
+                        );
+            });
         }
+
     }
     $(window).load(function () {
         App.box_fix();

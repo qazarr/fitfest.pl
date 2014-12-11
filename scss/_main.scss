@@ -36,7 +36,7 @@ and open the template in the editor.
     text-shadow: 0px -1px $deep #9f8510, 0px 1px $deep #fff;
 }
 body{
-    display:block; 
+    display:block;    
 }
 .info{
     background:url('../img/photo/grey/bg_fit.jpg');
@@ -46,7 +46,7 @@ body{
         font-family: 'latobold';
         font-size:rem-calc(60);
         line-height:rem-calc(66);
-        padding:50px 20px 10px 20px;
+        padding:0 20px 10px 20px;        
         margin:0;
         text-align:left;
         span{
@@ -92,10 +92,13 @@ body{
 
         }
         a{
-
             text-transform: uppercase;
             font-size:28px;
             color:$oil;
+            &.active{
+                color:$white;
+                background:$primary-color;
+            }
         }    
         ul{
             li{
@@ -180,10 +183,13 @@ h2{
 
 section{
     width:100%;
-    display:block;
+    display:block;    
     box-sizing: border-box;
     text-align:justify;
     margin-bottom:-5px;
+    &#home{        
+        background: $secondary-color;
+    }
     &.yellow{
         background:$primary-color;
         padding:200px 0;
@@ -212,7 +218,8 @@ section{
         box-sizing: border-box;
         h2{
             background: $secondary-color;
-            text-align:left;
+            padding:rem-calc(20);
+            text-align:center;
             span.number{
                 color:$primary-color;
             }
@@ -333,12 +340,12 @@ h3{
 .bg-yellow{
     background:$primary-color;
 }
-ul{
+ul:not(.slick-dots){
     list-style:none;
     padding:0;
     margin:0;
     font-size:22px;
-    text-align:left;
+    text-align:left;    
     li{
         padding-left:24px;
         text-indent:-24px;
@@ -389,12 +396,28 @@ ul{
     overflow:hidden;
 
 }
+.pic-fade{
+    background-size: 100%;    
+}
 .slider{
     margin:0 100px;
-    div{
-        margin:0 20px;
+    
+}
+input[type="text"], input[type="email"]{
+    font-size:16px;
+}
+form div.name-field{
+    padding:10px;
+    input{
+        color:$primary-color;
+        border-color:$secondary-color;
+        box-shadow: 0;
+        padding:6px;
+        box-sizing: border-box;        
+        height:auto;
     }
 }
+
 @media screen and (max-width:1300px){
     html{
         font-size:12px;
@@ -429,9 +452,7 @@ ul{
     }
     .slider{
         margin:0 20px;
-        div{
-            margin:0 20px;
-        }
+        
         button{
             display:none;
         }
